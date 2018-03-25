@@ -13,9 +13,9 @@ boolean buttonStates[6];
 
 boolean stepStates[3][4] =
 {
-  {true, true, false, false},
-  {false, true, true, false},
-  {false, false, true, true},
+  {true, true, false, true},
+  {false, false, true, false},
+  {true, false, true, true},
 };
 
 int midiNotes[4] = {60 - 24, 62 - 24, 68 - 24}; // change these values later.

@@ -1,13 +1,10 @@
-#include <EEPROM.h>
-#include <MIDI.h>
-//#include<iostream>
-
-//2018_03_08_07_02_001
-
 /*
    Drum Sequencer
    Multidimentional
 */
+
+#include <EEPROM.h>
+#include <MIDI.h>
 
 int buttonPins[6] = {36, 35, 34, 33, 14, 15};
 int ledPins[4] = {A8, A7, A6, A5};
@@ -62,7 +59,6 @@ void setup()
 
 void loop()
 {
-
   //debug
   tempo = map(analogRead(A13), 0, 1023, 5, 1000);
   updateChannel();
@@ -76,7 +72,7 @@ void sequence()
 
   if (digitalRead(manualSwitch) == HIGH)
   {
-    // tempo = map(analogRead(A13), 0, 1023, 5, 1000);
+    tempo = map(analogRead(A13), 0, 1023, 5, 1000); // This does not seem to work properly, yet.
   }
   // debug
   else
